@@ -1,6 +1,6 @@
 {
    "port": 10100,
-   "pollingInterval": 0.1,
-   "maxPollMisses":1 
+   "pollingInterval": 5,
+   "maxPollMisses": 2 
 }
 

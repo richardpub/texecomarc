@@ -39,13 +39,11 @@ function TexecomAlarm(_config) {
    this.armed = false;
    this.engineer = false;
 
-   this.pollingTolerance = 3000;   // ms
+   this.pollingTolerance = 30000;   // ms
    this.pollingTimeout = this.pollingInterval + this.pollingTolerance;
    this.pollsMissed = 0;
 
    this.decoders = { 2: new ContactIdProtocol("contactid:"+this.name), 3: new SIAProtocol("sia:"+this.name) };
-
-   var that = this;
 }
 
 util.inherits(TexecomAlarm, events.EventEmitter);
